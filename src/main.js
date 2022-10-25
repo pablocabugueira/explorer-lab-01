@@ -111,3 +111,13 @@ function updateCardNumber(number) {
 
   ccNumber.innerText = number.length === 0 ? "1234 5678 9012 3456" : number
 }
+
+expirationDateMasked.on("accept", () => {
+  updateExirationDate(expirationDateMasked.value)
+})
+
+function updateExirationDate(date) {
+  const ccExpiration = document.querySelector(".cc-extra .value")
+
+  ccExpiration.innerText = date.length === 0 ? "02/32" : date
+}
